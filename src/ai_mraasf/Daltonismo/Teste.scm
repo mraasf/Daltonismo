@@ -1,0 +1,4 @@
+#|
+$JSON
+{"authURL":["creator.kodular.io","ai2.appinventor.mit.edu"],"YaVersion":"208","Source":"Form","Properties":{"$Name":"Teste","$Type":"Form","$Version":"27","AlignHorizontal":"3","AlignVertical":"2","AppName":"Daltonismo","Title":"Teste","Uuid":"0","$Components":[{"$Name":"Label1","$Type":"Label","$Version":"5","Text":"Que n\u00famero voc\u00ea v\u00ea na imagem abaixo ","Uuid":"-1361630229"},{"$Name":"Image1","$Type":"Image","$Version":"4","Uuid":"-1303267718"},{"$Name":"Text_Box1","$Type":"TextBox","$Version":"6","Width":"-1050","Uuid":"-598974861"},{"$Name":"BtnOk","$Type":"Button","$Version":"6","Width":"-1050","Shape":"1","Text":"ok","Uuid":"957610776"},{"$Name":"BtnCancel","$Type":"Button","$Version":"6","Width":"-1050","Text":"Cancelar","Uuid":"138305276"},{"$Name":"Notifier1","$Type":"Notifier","$Version":"6","Uuid":"376308873"},{"$Name":"Tiny_DB1","$Type":"TinyDB","$Version":"2","Uuid":"1281594420"}]}}
+|#

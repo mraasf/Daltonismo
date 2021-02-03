@@ -1,0 +1,745 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="s30h}#]!l)iWDgYI]@ac" x="295" y="-812">
+    <mutation component_type="Notifier" is_generic="false" instance_name="Notifier1" event_name="AfterChoosing"></mutation>
+    <field name="COMPONENT_SELECTOR">Notifier1</field>
+    <statement name="DO">
+      <block type="controls_if" id=",gs9H(/CxbN`Fjzm~S?S">
+        <value name="IF0">
+          <block type="logic_or" id="k)P==%I{VvDH4PZf1iB#">
+            <mutation items="2"></mutation>
+            <field name="OP">OR</field>
+            <value name="A">
+              <block type="logic_compare" id="b6+|ug+-LJ@y5d;KPWJy">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="lexical_variable_get" id="3=KH1T*~K5Zu:=1A7Pq#">
+                    <mutation>
+                      <eventparam name="choice"></eventparam>
+                    </mutation>
+                    <field name="VAR">choice</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="=?9w{W(09WCA1V%?iJtk">
+                    <field name="TEXT">ok</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_compare" id=")pZS/=R+n?=vmi7Ro(Uj">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="lexical_variable_get" id="I4T3V=+jL{,v3=kzSZ#5">
+                    <mutation>
+                      <eventparam name="choice"></eventparam>
+                    </mutation>
+                    <field name="VAR">choice</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="SoZAbJLHFpnC?|BLzutH">
+                    <field name="TEXT">ok, vou procurar um especialista.</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="procedures_callnoreturn" id="U!N~x0Kx4;7,!SzZ)`eX" inline="false">
+            <mutation name="mudartela"></mutation>
+            <field name="PROCNAME">mudartela</field>
+            <next>
+              <block type="controls_closeScreen" id="@*=]`#5dqZXn_8CAU0PZ"></block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="P0r)j;tsy5+2oMv;G=-Q" x="-450" y="-770">
+    <mutation component_type="Button" is_generic="false" instance_name="BtnCancel" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">BtnCancel</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="GHBU?9O+W-xi)2yfru$`" inline="false">
+        <mutation name="zeraBd"></mutation>
+        <field name="PROCNAME">zeraBd</field>
+        <next>
+          <block type="procedures_callnoreturn" id="SH=5c)$U@-/8fed5L9%^" inline="false">
+            <mutation name="mudartela"></mutation>
+            <field name="PROCNAME">mudartela</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="0mHIbI.=t,HoeWkjj?tt" x="-450" y="-530">
+    <mutation component_type="Button" is_generic="false" instance_name="BtnOk" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">BtnOk</field>
+    <statement name="DO">
+      <block type="controls_if" id="6adaInVjCWuBwhq|mVi%">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="math_is_a_number" id="4MlJ(~!o]vg~s,Fo?CQz">
+            <field name="OP">NUMBER</field>
+            <value name="NUM">
+              <block type="component_set_get" id="C/dsm2RCpwty.YPmu3Gb">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box1"></mutation>
+                <field name="COMPONENT_SELECTOR">Text_Box1</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="Sz/9j0/tK4Fdn(PXO~x$">
+            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+            <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+            <value name="ARG0">
+              <block type="text" id="UP(B36J8-9PB{#U/T0Bg">
+                <field name="TEXT">resposta</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="component_set_get" id=";A1nuWPy#rn]H8PfvBmL">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box1"></mutation>
+                <field name="COMPONENT_SELECTOR">Text_Box1</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="](TZd-,A=R+WyRGj;h2N">
+                <mutation elseif="2" else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="3HGN(Tleix7?)UL744s8">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="component_method" id="d?HU9`Yys{~%(SkyR`SN">
+                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                        <value name="ARG0">
+                          <block type="text" id="vG#e]^?(SU@|dc[0hs-/">
+                            <field name="TEXT">teste</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="oA?xVyFtBJlR*2=-lCm[">
+                            <field name="TEXT"> </field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="L2h+h;-q:AeOa18aAHa~">
+                        <field name="TEXT">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="controls_if" id="R3i?jViWMM](jPIjzaGv">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="math_compare" id="$E2qab3`ZX9kkSn{UGv4">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="component_method" id="jRd{RaqyoYfrsn`Ru)l|">
+                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                            <value name="ARG0">
+                              <block type="text" id="}XK]xZUhLJ=#3tK8aeZS">
+                                <field name="TEXT">resposta</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="math_number" id="R:dKr2$R#.cs.m_ndmn?">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="MGbpN@}_%aEWlwRMLDbL">
+                            <field name="NUM">8</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="procedures_callnoreturn" id="`09n1M2jARJiU.9g8%jI" inline="false">
+                        <mutation name="testeok"></mutation>
+                        <field name="PROCNAME">testeok</field>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="component_method" id="hM-#O9g`x~9z0Gd!uA):">
+                        <mutation component_type="Notifier" method_name="ShowChooseDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Notifier1</field>
+                        <value name="ARG0">
+                          <block type="text_join" id="3:ioml-2GZ!4*dl]x0u~">
+                            <mutation items="3"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="vZ]??$Zu?Xxuy::DH12$">
+                                <field name="TEXT">No teste 1 Você digitou: </field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="component_method" id="Gj0Fxw~1qsDL9[@_@6)m">
+                                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                                <value name="ARG0">
+                                  <block type="text" id="Jbsbu%et(A(P`u|,.YZg">
+                                    <field name="TEXT">resposta</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block type="text" id="R.YS%:iT/1O1()7N{^cf">
+                                    <field name="TEXT"> </field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="text" id="qY=lJP5c,lNRlwyV}-v.">
+                                <field name="TEXT">, no entanto o valor correto é :  8. O teste identificou sinais de daltonismo .</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="f{I+U)dJ`j?/[_UxUd0!">
+                            <field name="TEXT">resultado:</field>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block type="text" id="4Vr{,Gv$,WeV;~P8V0N1">
+                            <field name="TEXT">ok, vou procurar um especialista.</field>
+                          </block>
+                        </value>
+                        <value name="ARG3">
+                          <block type="text" id="6Uk12Mzf`4XHKWL@c,p/">
+                            <field name="TEXT"></field>
+                          </block>
+                        </value>
+                        <value name="ARG4">
+                          <block type="logic_boolean" id="y+yS}-SytV7]V=#Oh_Ox">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_method" id="*sO4DT]%vZf3oM?/{b3f">
+                            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                            <value name="ARG0">
+                              <block type="text" id="mXulSJ(K{`B%.*sSWFI%">
+                                <field name="TEXT">msg</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="text_join" id="/71gl[,-r6l*zIN3cJgs">
+                                <mutation items="3"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="CFf(t|/!,uNtgj;3cZ,k">
+                                    <field name="TEXT">No teste 1 Você digitou: </field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="component_method" id="9?WTZvru;N|4NEcHDn!{">
+                                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                                    <value name="ARG0">
+                                      <block type="text" id="{l0.QMFpThG90.q`6:kG">
+                                        <field name="TEXT">resposta</field>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="text" id="99%;z3,q,Q2|H)yO*v`q">
+                                        <field name="TEXT"> </field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD2">
+                                  <block type="text" id="Fy4P8@$2TDv]rg3{PnXR">
+                                    <field name="TEXT">, no entanto o valor correto é :  8. O teste identificou sinais de daltonismo .</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+                <value name="IF1">
+                  <block type="logic_compare" id="F])ATDTVaPl3RF]jFDCo">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="component_method" id="-d=M5zQjx{?UDf/b3sfi">
+                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                        <value name="ARG0">
+                          <block type="text" id="zv9aw.KbsfDLH#oXH!6@">
+                            <field name="TEXT">teste</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="70~hhLb5umc#GLKYLQ.Z">
+                            <field name="TEXT"> </field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="Q?oX@Fm4$}(_7qvvz(V4">
+                        <field name="TEXT">2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block type="controls_if" id=",l#xi@a~IwIX$%W2fW#d">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="math_compare" id="e!/cFZX{T*ea/EbvH(8D">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="component_method" id="ZBT;6bMSO3XoUqui{xo*">
+                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                            <value name="ARG0">
+                              <block type="text" id="z{|V2?f/%TG4E_E^vSQg">
+                                <field name="TEXT">resposta</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="math_number" id="FnYMDy*JDG{G5a8PTUlV">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="JesKL?1WJ@lCn7pDu*LR">
+                            <field name="NUM">74</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="procedures_callnoreturn" id=";=l$-ikL3RibYlthC6}w" inline="false">
+                        <mutation name="testeok"></mutation>
+                        <field name="PROCNAME">testeok</field>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="component_method" id="g~?.3+ggCpq^|meg./(%">
+                        <mutation component_type="Notifier" method_name="ShowChooseDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Notifier1</field>
+                        <value name="ARG0">
+                          <block type="text_join" id="JNA)!;QeYnhkzdUn5jPp">
+                            <mutation items="3"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="8K1c;e[!@v%B$pW+u]|O">
+                                <field name="TEXT">no teste 02 Você digitou: </field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="component_method" id="oO9R{T0#ZZ_{{=j9{bK:">
+                                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                                <value name="ARG0">
+                                  <block type="text" id="GTUv*o=1FFnAr6n:6:A;">
+                                    <field name="TEXT">resposta</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block type="text" id="q3UhV1ZeLlBcHsZ/eISI">
+                                    <field name="TEXT"> </field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="text" id=")YoxY_!D:X0#dR.LbWpj">
+                                <field name="TEXT">, no entanto o valor correto é :  74 . O teste identificou sinais de daltonismo .</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="MWb`XK@WL$P]bwc?4nqr">
+                            <field name="TEXT">resultado:</field>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block type="text" id="tg%wr{$?u[$JMD}oeal)">
+                            <field name="TEXT">ok, vou procurar um especialista.</field>
+                          </block>
+                        </value>
+                        <value name="ARG3">
+                          <block type="text" id="_dlTMY6~w`d^)y,_tY-y">
+                            <field name="TEXT"></field>
+                          </block>
+                        </value>
+                        <value name="ARG4">
+                          <block type="logic_boolean" id="|b))Z83RtD.1|PB%;{0!">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_method" id="FmyYyj*7{EEbl}(DoHL9">
+                            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                            <value name="ARG0">
+                              <block type="text" id="OH,D5Xd`ePb:iAx$1wDS">
+                                <field name="TEXT">msg</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="text_join" id="xTp-+v|z/o7X2cc|]xgK">
+                                <mutation items="3"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="]hV?ZY9f=2A98X;[RGTV">
+                                    <field name="TEXT">no teste 02 Você digitou: </field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="component_method" id="#T:1mI@1@Iw9%YDU.zUR">
+                                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                                    <value name="ARG0">
+                                      <block type="text" id="$KXXm$!--XRltQ52]7,:">
+                                        <field name="TEXT">resposta</field>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="text" id="U=`j!gF98;5t[;uBp|N+">
+                                        <field name="TEXT"> </field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD2">
+                                  <block type="text" id=")4Ru|INxVOPOT8!0N8:o">
+                                    <field name="TEXT">, no entanto o valor correto é :  74 . O teste identificou sinais de daltonismo .</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+                <value name="IF2">
+                  <block type="logic_compare" id="p.X9)^$+$ZrO@@So=OZ=">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="component_method" id="},jNzY)Jv+@5.W|!nMuU">
+                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                        <value name="ARG0">
+                          <block type="text" id="SnEd0|+sgiDkp+pY9~nF">
+                            <field name="TEXT">teste</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="f?5J7A;DQ-sTa8[L:{/B">
+                            <field name="TEXT"> </field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="isM#F0OstSA*!zbj3WI4">
+                        <field name="TEXT">3</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO2">
+                  <block type="controls_if" id="1,~M^qT8H[dbbcM2/hTE">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="math_compare" id="3*znjz1!qGSes}.?gDc?">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="component_method" id="v/;8o1|jOJ-Fz*Nwo_3b">
+                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                            <value name="ARG0">
+                              <block type="text" id="KQ7`1~xz`UarmEy`#SP^">
+                                <field name="TEXT">resposta</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="math_number" id="Y8=],qcyS,2_b8iu.093">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="SC_P%#XSc{EpS1h9F728">
+                            <field name="NUM">29</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="procedures_callnoreturn" id="g@z+)Y9YiD~=E]TY^Y9}" inline="false">
+                        <mutation name="testeok"></mutation>
+                        <field name="PROCNAME">testeok</field>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="component_method" id=",4$]{~(m(9|OQnnm%l(j">
+                        <mutation component_type="Notifier" method_name="ShowChooseDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Notifier1</field>
+                        <value name="ARG0">
+                          <block type="text_join" id="7ytmXdu#o;tR!|y{k2RS">
+                            <mutation items="3"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="15XJj.L^2z_y@6!C2)dm">
+                                <field name="TEXT">no teste 03 Você digitou: </field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="component_method" id="@f#^XzX3*W34{X3o4R[=">
+                                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                                <value name="ARG0">
+                                  <block type="text" id="WnAcmhSyB@6umN2YG9Gg">
+                                    <field name="TEXT">resposta</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block type="text" id="*+#q#lLnu1M6=R8Lud#Z">
+                                    <field name="TEXT"> </field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="text" id="PG^jg,ajewX_aLeChoi2">
+                                <field name="TEXT">, no entanto o valor correto é :  29 . O teste identificou sinais de daltonismo .</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="y,84~B-0@+b:Q%7F1X+8">
+                            <field name="TEXT">resultado:</field>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block type="text" id="k1c.+dykqDF1!:lKo([o">
+                            <field name="TEXT">ok, vou procurar um especialista.</field>
+                          </block>
+                        </value>
+                        <value name="ARG3">
+                          <block type="text" id="$=?:t$zZtusfHF_sp-6y">
+                            <field name="TEXT"></field>
+                          </block>
+                        </value>
+                        <value name="ARG4">
+                          <block type="logic_boolean" id="xJd/3b/VVfGz%}3Fli$M">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_method" id="Bn--K@wtu~dge[E(LaU*">
+                            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                            <value name="ARG0">
+                              <block type="text" id="apPyN8o~?ux.:gt#=^|J">
+                                <field name="TEXT">msg</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="text_join" id="Tk|@|ULz7Ycp[C0#og%|">
+                                <mutation items="3"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="mqFNDcM^P]`*WwZmKHCm">
+                                    <field name="TEXT">no teste 03 Você digitou: </field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="component_method" id="e4tq8y0a,mn4n^YL=VpH">
+                                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                                    <value name="ARG0">
+                                      <block type="text" id="_tKw3QuX9CL?/33pv~xJ">
+                                        <field name="TEXT">resposta</field>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="text" id="uoIRHj+Wta(6IhGj]?s7">
+                                        <field name="TEXT"> </field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD2">
+                                  <block type="text" id="-Tf,|D74Vr-9sdh3t-qx">
+                                    <field name="TEXT">, no entanto o valor correto é :  29 . O teste identificou sinais de daltonismo .</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_method" id="Bc.B/;RLCY-38J26vJ=T">
+            <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="ARfgUpYM!~u*RST%Wf?P">
+                <field name="TEXT">O valor digitado não é um número, tente novamente.</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="wfXi=vu@BlU.bMuA`z/j">
+                <field name="TEXT">Erro</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block type="text" id="xrUt4V!~I^W4i6R7`aGH">
+                <field name="TEXT">ok</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="{,$4IO8MP[B=V/qj/##%" x="330" y="-430">
+    <field name="NAME">zeraBd</field>
+    <statement name="STACK">
+      <block type="component_method" id="c+KWBqkg;hf*3wgDQ^w,">
+        <mutation component_type="TinyDB" method_name="ClearAll" is_generic="false" instance_name="Tiny_DB1"></mutation>
+        <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="H:ebcN91Iz_w!$SW9[/W" x="-1139" y="-253">
+    <mutation component_type="Form" is_generic="false" instance_name="Teste" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Teste</field>
+    <statement name="DO">
+      <block type="component_set_get" id="Ch%;b|A_tHVEpLed]ah7">
+        <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image1"></mutation>
+        <field name="COMPONENT_SELECTOR">Image1</field>
+        <field name="PROP">Picture</field>
+        <value name="VALUE">
+          <block type="text_join" id="9o=7qD[|OtCx#,0hdwXJ">
+            <mutation items="3"></mutation>
+            <value name="ADD0">
+              <block type="text" id="dRyBm1B#$-zLM{wWfh28">
+                <field name="TEXT">imagem</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="component_method" id="}Z~AM_7(~pUQ5{|s1NVz">
+                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                <value name="ARG0">
+                  <block type="text" id="XF|lhbzJ:b^6dE{.*EFx">
+                    <field name="TEXT">teste</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="VffxKHA^CYA)93}}E^Vx">
+                    <field name="TEXT">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="text" id="CwJ3t$iDcN?R?5+VUpYo">
+                <field name="TEXT">.png</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id=")cn_R1Iy5TSnL@4@lp@," x="330" y="-290">
+    <field name="NAME">mudartela</field>
+    <statement name="STACK">
+      <block type="controls_openAnotherScreen" id="y7K_P:YvG~}1a|0|O#dx">
+        <value name="SCREEN">
+          <block type="text" id="rO?u`6FgU^ApX}6h?FA4">
+            <field name="TEXT">Screen1</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="text" id="mcx!w]6vGJ]N=P^Sj!r+" x="-346" y="-18">
+    <field name="TEXT">Você visualizou o número correto, o teste Não identificou daltonismo </field>
+  </block>
+  <block type="procedures_defnoreturn" id="UZ}5j)d3Tbzub_EE-t{m" x="-1212" y="1035">
+    <field name="NAME">testeok</field>
+    <statement name="STACK">
+      <block type="component_method" id="dAhWMtbW[*J^))AX[l+B">
+        <mutation component_type="Notifier" method_name="ShowChooseDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="#AScb::AqC4Qsz|XOH-I">
+            <field name="TEXT">Você visualizou o número correto, o teste Não identificou daltonismo </field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="T=uu$Y~pyJ?#DtOOC8IV">
+            <field name="TEXT">resultado:</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="YIQd:#eu$@L$np1nI.|[">
+            <field name="TEXT">ok</field>
+          </block>
+        </value>
+        <value name="ARG3">
+          <block type="text" id="GUcOC5NX1$2P%,;hiz]-">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+        <value name="ARG4">
+          <block type="logic_boolean" id="CCI3~7ew~22][Yja2gPF">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="dA5e~7H%]92Hf-$2:,*R">
+            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+            <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+            <value name="ARG0">
+              <block type="text" id="!NmKA790oiJ+W-xjEenh">
+                <field name="TEXT">msg</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="!v+Shecsvu:Is{Sp1zR)">
+                <field name="TEXT">Você visualizou o número correto, o teste Não identificou daltonismo </field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="208" language-version="33"></yacodeblocks>
+</xml>
